@@ -1,15 +1,14 @@
 pipeline {
-    agent any 
- }
-      stages{
-        
-      }  
-        stage('all maven commands'){
-            steps{
+    agent any
+    stages {
+        stage('All Maven Commands') {
+            steps {
                 sh 'mvn clean test compile install package'
             }
         }
-        
+    }
+}
+
     
 
    
