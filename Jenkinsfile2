@@ -8,6 +8,9 @@ pipeline {
 
         stage('sonarqube scan'){
             steps{
+                withSonarQubeEnv('sonarserver'){
+                    
+                }
                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ISAMBITUMA_week16-code'
             }
         stage('All Maven Commands') {
